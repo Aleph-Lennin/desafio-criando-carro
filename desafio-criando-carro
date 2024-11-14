@@ -1,0 +1,20 @@
+class Carros {
+  marca;
+  cor;
+  gastoMedioPorKm;
+
+  constructor(marca, cor, gastoMedioPorKm) {
+    this.marca = marca;
+    this.cor = cor;
+    this.gastoMedioPorKm = gastoMedioPorKm;
+  }
+  calcularGasto(distanciaKm, precoCombustivel) {
+    return distanciaKm * this.gastoMedioPorKm * precoCombustivel;
+  }
+}
+const palio = new Carros("fiat", "vermelho", 1 / 12);
+const corola = new Carros("toyota", "preto", 1 / 15);
+
+console.log(`Marca do carro : ${palio.marca}`);
+console.log(`Cor do carro : ${palio.cor}`);
+console.log(`Valor gastos na viagem : ${palio.calcularGasto(75, 5)}`);
